@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import ReactDOM from "react-dom/client";
-import Navigation from "./components/Navigation";
-import About from "./components/About";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
-import Portfolio from "./components/Portfolio";
-import Footer from "./components/Footer";
+// import ReactDOM from "react-dom/client";
+import About from "./About";
+import Resume from "./Resume";
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
 import NavTabs from './NavTabs';
+import Footer from "./Footer";
+import Header from "./Header";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('about');
@@ -22,24 +22,13 @@ export default function App() {
     }
     return <Contact />;
   };
-  // return (<>
-  //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path="/" element={<Navigation />}>
-  //         <Route index element={<About />} />
-  //         <Route path="portfolio" element={<Portfolio />} />
-  //         <Route path="contact" element={<Contact />} />
-  //         <Route path="resume" element={<Resume />} />
-  //       </Route>
-  //     </Routes>
-  //   </BrowserRouter>
-  //   <Footer/>
-  //   </>
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
+      <Header />
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Footer />
       {renderPage()}
     </div>
   );

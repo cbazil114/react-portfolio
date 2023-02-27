@@ -1,39 +1,38 @@
-import { useState, useEffect } from 'react';
-import { Link, Outlet } from 'react';
+// import { useState, useEffect } from 'react';
+// import { Link, Outlet } from 'react';
+import React from "react";
 
-function Footer(){
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div>
+          <a
+            href="https://github.com/cbazil114"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>Github</p>
+          </a>
+          </div>
+          <div>
+          <a
+            href="https://www.linkedin.com/in/connor-bazil-415b9440/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>LinkedIn</p>
+          </a>
+          </div>
+          <div>
+          <a
+            href="https://twitter.com/conbazil"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>Twitter</p>
+          </a>
 
-    const [number,setNumber] = useState(1);
-
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         setNumber((number)=>number+1)
-    //     },1000)
-    // },[number])
-
-    return(<div className="navBarLinks">
-        <h1>I've rendered {number} times</h1>
-        <nav>
-        <ul>
-          <li>
-            <Link to="/">About Me</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/resume">Resumé</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
-    </div>)
-// put an avatar and your name up here
-
+      </div>
+    </footer>
+  );
 }
-
-export default Footer

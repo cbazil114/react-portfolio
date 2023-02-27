@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NavTabs({ currentPage, handlePageChange }) {
+export default function NavTabs({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
@@ -16,7 +16,6 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#portfolio"
           onClick={() => handlePageChange('Portfolio')}
-          //  TODO: Add a comment explaining what this logic is doing
 
           className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
         >
@@ -27,7 +26,6 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#resume"
           onClick={() => handlePageChange('Resume')}
-          //  TODO: Add a comment explaining what this logic is doing
 
           className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
         >
@@ -37,7 +35,6 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#contact"
-          //  TODO: Add a comment explaining what this logic is doing
 
           onClick={() => handlePageChange('Contact')}
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
@@ -48,5 +45,3 @@ function NavTabs({ currentPage, handlePageChange }) {
     </ul>
   );
 }
-
-export default NavTabs;
