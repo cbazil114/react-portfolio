@@ -4,7 +4,7 @@ import picture from '../../assets/img/schoolpic.jpg';
 export default function About() {
     return (
       <div>
-        <h1 className="">About</h1>
+        <h1 className="title">About</h1>
         <p>
         Hello, and welcome to my portfolio page. My name is Connor Bazil, and I am currently a student at the UNH Coding Bootcamp.
 
