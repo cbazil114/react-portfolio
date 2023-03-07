@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color:antiquewhite;
+}
+
+header {
+  background-color:olivedrab;
+  color:antiquewhite;
+  padding:20px;
+  flex-wrap:wrap;
+}
+
+footer {
+  display:flex;
+  flex-wrap:wrap;
+  background-color:olivedrab;
+  color: antiquewhite;
+  text-align: center;
+  border: none;
+  justify-content: center;
+}
+
+.footer-item {
+  margin: 10px;
+}
+
+h1 {
+  display:inline-block;
+  font-size:40px;
+}
+
+h2 {
+  font-size: 24px;
+  display:flex;
+  padding:15px;
+  flex:30%;
+  border-right:5px solid olivedrab;
+  min-width: 200px;
+  max-width:200px;
+  flex: 1 1 300px;
+ 
+}
+
+.card {
+  display:flex;
+  padding: 10px;
+  flex-direction:row;
+  flex:70%;
+  border: 10px solid olivedrab;
+  margin: 10px;
+  flex-wrap:wrap;
+  align-items:center;
+  position:relative;
+  flex: 1 1 100%
+}
+
+.card img {
+  width:100%
+}
