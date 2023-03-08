@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('about');
+  const [currentPage, setCurrentPage] = useState('About');
   const renderPage = () => {
     if (currentPage === 'About') {
       return <About />;
@@ -26,9 +26,13 @@ export default function App() {
 
   return (
     <div>
+      <main>
       <Header />
+      <section>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      </section>
       <Footer />
+      </main>
       {renderPage()}
     </div>
   );
