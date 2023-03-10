@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../../utils/helpers';
 
 export default function Contact() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -19,28 +19,27 @@ export default function Contact() {
 
     // Based on the input type, we set the state of either email, username, and password
     if (inputType === 'email') {
-      if (validateEmail(inputValue)) {
+      if (e.target.value.length == 0) {
+        setErrorMessage('Please enter an email address');
+      } else if (validateEmail(inputValue)) {
         setErrorMessage('');
         setEmail(inputValue);
         // Check if the email is valid after input is done (using onBlur to trigger once cursor leaves email input box)
       } else {
-        setErrorMessage('');
       setErrorMessage('Please enter a valid email');
     }} else if (inputType === 'message') {
-      if (!setMessage(inputValue)) {
-        setErrorMessage('Please enter a message')
+      if (e.target.value.length == 0) {
+        setErrorMessage('Please enter a message');
       } else {
         setErrorMessage('');
         setMessage(inputValue);
       }
     } else {
-      if (checkPassword(inputValue)) {
-        setErrorMessage('');
-        setPassword(inputValue);
+      if (e.target.value.length == 0) {
+        setErrorMessage('Please enter a name')
       } else {
-        setErrorMessage(
-          `Please enter a password`
-        );
+        setErrorMessage('');
+        setName(inputValue);
     }
   }
   };
@@ -55,7 +54,7 @@ export default function Contact() {
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setMessage('');
-    setPassword('');
+    setName('');
     setEmail('');
   };
 
@@ -78,11 +77,11 @@ export default function Contact() {
           placeholder="Message"
         />
         <input
-          defaultValue={password}
-          name="password"
+          defaultValue={name}
+          name="name"
           onBlur={handleInputChange}
-          type="password"
-          placeholder="Password"
+          type="text"
+          placeholder="Name"
         />
         <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
