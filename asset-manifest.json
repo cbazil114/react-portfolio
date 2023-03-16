@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.5b50bfc2.css",
+    "main.js": "/react-portfolio/static/js/main.f3c51130.js",
+    "static/js/787.0443160a.chunk.js": "/react-portfolio/static/js/787.0443160a.chunk.js",
+    "static/media/horiseon.png": "/react-portfolio/static/media/horiseon.7cf35f2a4ec53889dadc.png",
+    "static/media/portfoliopage.png": "/react-portfolio/static/media/portfoliopage.01ad2f8228914f627542.png",
+    "static/media/texteditor.png": "/react-portfolio/static/media/texteditor.ea15683793beb0e80bb3.png",
+    "static/media/calendarapp.png": "/react-portfolio/static/media/calendarapp.5f16c1a4a43a9fe452ba.png",
+    "static/media/bazil-resume.pdf": "/react-portfolio/static/media/bazil-resume.2389387abd3388fb11ec.pdf",
+    "static/media/codequiz.png": "/react-portfolio/static/media/codequiz.acc77bfd529d7403ebfa.png",
+    "static/media/notetaker.png": "/react-portfolio/static/media/notetaker.0c3a3b95618a7bbc7f6e.png",
+    "static/media/schoolpic.jpg": "/react-portfolio/static/media/schoolpic.77f262c766b5292dae01.jpg",
+    "index.html": "/react-portfolio/index.html",
+    "main.5b50bfc2.css.map": "/react-portfolio/static/css/main.5b50bfc2.css.map",
+    "main.f3c51130.js.map": "/react-portfolio/static/js/main.f3c51130.js.map",
+    "787.0443160a.chunk.js.map": "/react-portfolio/static/js/787.0443160a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b50bfc2.css",
+    "static/js/main.f3c51130.js"
+  ]
+}
